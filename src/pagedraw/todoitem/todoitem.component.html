@@ -1,0 +1,50 @@
+<div class="todoitem">
+    <ng-container *ngIf="state === 'default'">
+        <div class="todoitem-default-3">
+            <div class="todoitem-0-0-0">
+                <div class="todoitem-rectangle_2" (click)="triggerToggleItemCompleted($event)">
+                    
+                </div>
+                <div class="todoitem-0-0-0-1">
+                    <div class="todoitem-0-0-0-1-0">
+                        <div class="todoitem-text_5">{{content}}</div>
+                    </div>
+                </div>
+                <div class="todoitem-0-0-0-2">
+                    <div class="todoitem-0-0-0-2-0">
+                        <div class="todoitem-text-3" (click)="triggerDelete($event)">
+                            x
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="todoitem-0-0-1">
+                <div class="todoitem-line_2"></div>
+            </div>
+        </div>
+    </ng-container>
+    <ng-container *ngIf="state === 'completed'">
+        <div class="todoitem-completed-7">
+            <div class="todoitem-1-0-0">
+                <div class="todoitem-image-1" (click)="triggerToggleItemCompleted($event)">
+                    
+                </div>
+                <div class="todoitem-1-0-0-1">
+                    <div class="todoitem-1-0-0-1-0">
+                        <div class="todoitem-text_5-8">{{content}}</div>
+                    </div>
+                </div>
+                <div class="todoitem-1-0-0-2">
+                    <div class="todoitem-1-0-0-2-0">
+                        <div class="todoitem-text-1" (onClick)="triggerHandleDelete($event)">
+                            x
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="todoitem-1-0-1">
+                <div class="todoitem-line_2-1"></div>
+            </div>
+        </div>
+    </ng-container>
+</div>

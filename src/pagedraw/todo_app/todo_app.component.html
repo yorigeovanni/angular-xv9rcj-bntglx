@@ -1,0 +1,50 @@
+<div class="todo_app-todo_app-6">
+    <div class="todo_app-0">
+        <div class="todo_app-0-0"></div>
+        <div class="todo_app-text_2">todos</div>
+        <div class="todo_app-0-2"></div>
+    </div>
+    <div class="todo_app-1">
+        <div class="todo_app-rectangle-7">
+            <div class="todo_app-1-0-0">
+                <div class="todo_app-1-0-0-0">
+                    <div class="todo_app-1-0-0-0-0">
+                        <img class="todo_app-image_2" src="https://ucarecdn.com/135efc3c-9d9b-4301-85cc-ff3af12a9ef9/" (click)="triggerToggleAll($event)" /> 
+                    </div>
+                </div>
+                <div class="todo_app-textinput_instance-8">
+                    <textinput [value]="text"></textinput>
+                </div>
+            </div>
+            <div class="todo_app-1-0-1">
+                <div class="todo_app-line-9"></div>
+            </div>
+            <div class="todo_app-1-0-2">
+                <div class="todo_app-1-0-2-0">
+                    <ng-container *ngFor="let elem of list; let i=index">
+                        <div class="todo_app-rectangle_4" (click)="triggerToggleItemCompleted($event, i, elem)">
+                            <div class="todo_app-1-0-2-0-0-0-0">
+                                <div class="todo_app-todoitem_instance-4">
+                                    <todoitem [content]="elem.content" [state]="(elem.completed ? 'completed' : 'default')" [toggle]="elem.toggle" [handleDelete]="elem.delete">
+                                        
+                                    </todoitem>
+                                </div>
+                            </div>
+                        </div>
+                    </ng-container>
+                </div>
+            </div>
+            <div class="todo_app-1-0-3">
+                <div class="todo_app-text_5">{{ 'items left'}}</div>
+            </div>
+        </div>
+    </div>
+    <div class="todo_app-2">
+        <div class="todo_app-2-0"></div>
+        <div class="todo_app-text_3">
+            Double-click to edit a todo
+        </div>
+        <div class="todo_app-2-2"></div>
+    </div>
+    <div class="todo_app-3"></div>
+</div>
